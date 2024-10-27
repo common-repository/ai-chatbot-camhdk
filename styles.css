@@ -1,0 +1,75 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.chatbot-button {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1001; /* Ensure it appears above the iframe */
+}
+
+.chatbot-button:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-iframe {
+    position: absolute;
+    bottom: 0;
+    right: calc(100% + 20px); /* Position the iframe to the right of the button */
+    width: 325px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    resize: both;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    z-index: 999; /* Ensure it appears below other content */
+}
+
+.chatbot-iframe.active {
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1002; /* Ensure it appears above the iframe */
+}
+
+.loading-gif {
+    position: absolute;
+    bottom: 0;
+    right: calc(100% + 20px); /* Position the loading GIF to the right of the button */
+    width: 325px; /* Match the width of the iframe */
+    height: 300px; /* Match the height of the iframe */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000; /* Ensure it appears above the iframe */
+    border: none;
+}
+
+.loading-gif img {
+    height: 100px;
+    width: 350px; /* Adjust the size of the loading GIF as needed */
+}
